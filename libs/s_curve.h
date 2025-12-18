@@ -29,7 +29,7 @@ extern "C"
 #endif
 
 #include <stdbool.h>
-#include "main.h"
+#include <stdint.h>
 
 // 最大二分查找误差
 #ifndef S_CURVE_MAX_BS_ERROR
