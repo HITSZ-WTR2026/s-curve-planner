@@ -21,9 +21,9 @@ endif ()
 # ---------------------------------------------------------------------------
 # collect layer sources
 # ---------------------------------------------------------------------------
-set(ALL_SOURCES lib/s_curve.c)
+set(ALL_SOURCES libs/s_curve.c)
 
-set(ALL_HEADERS "lib/s_curve.h")
+set(ALL_HEADERS "libs/s_curve.h")
 
 # ---------------------------------------------------------------------------
 # feature options: option + source + macro
