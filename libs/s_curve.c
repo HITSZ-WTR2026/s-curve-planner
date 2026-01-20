@@ -150,6 +150,16 @@ SCurve_Result_t SCurve_Init(SCurve_t*   s,
     s->vs = vs, s->as = as;
     s->jm = jm;
 
+    // 如果目标基本没有变化，则不动
+    if (len < 1e-6f)
+    {
+        s->t0         = 0;
+        s->t1         = 0;
+        s->has_const  = false;
+        s->t2         = 0;
+        s->total_time = 0;
+    }
+
     if (fabsf(vs) > vm || fabsf(as) > am)
         // 如果初速度或者初加速度超限，则生成失败
         return S_CURVE_FAILED;
